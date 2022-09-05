@@ -1,0 +1,21 @@
+
+.logo{
+    width:90%;
+    height:50px;
+    padding-top: 20px;
+}
+.dashboard-title{
+    line-height:40px;
+    text-align:left;
+}
+hr{
+    border:1px solid gray;
+}
+.dashboard-title:hover{
+    color:white;
+    font-weight: 500;
+}
+.active{
+    color: white;
+    font-weight: 500;
+}
