@@ -8,10 +8,20 @@ import { DashboardContext } from '../Context/DashboardContent';
 import API from './Right/API';
 import Errors from './Right/Errors';
 import LongestRequests from './Right/LongestRequests';
+import Navbar from '../Header/Navbar';
+import {FaChevronCircleLeft,FaChevronCircleRight} from 'react-icons/fa'
 const Body = () => {
     const { dashboardContent } = useContext(DashboardContext);
+    const { sidebar } = useContext(DashboardContext);
+    const { sidebarWidth } = useContext(DashboardContext);
     const [leftWidth, setLeftWidth] = useState("left");
     const changeWidth = () => {
+        if (sidebar == "max") {
+            sidebarWidth("min")
+        }
+        else {
+            sidebarWidth("max");
+        }
         if (leftWidth == "left") {
             setLeftWidth("min-left")
         }
@@ -23,10 +33,11 @@ const Body = () => {
       <div className="body">
           <div className={leftWidth}>
               <Left />
-              <p className="dashboard-title" onClick={() => changeWidth()}>{leftWidth == "left" ? "minimize" : "maximize"}</p>
-              <hr/>
+              <p style={{fontSize:"32px",textAlign:"center"}} className="dashboard-title" onClick={() => changeWidth()}>{leftWidth == "left" ? <FaChevronCircleLeft/> : <FaChevronCircleRight/>}</p>
+              
           </div>
           <div className='right'>
+              <Navbar/>
               {dashboardContent=="summary"?<Summary/>:dashboardContent=="api"?<API/>:dashboardContent=="errors"?<Errors/>:dashboardContent=="longest"&&<LongestRequests/>}
           </div>
     </div>

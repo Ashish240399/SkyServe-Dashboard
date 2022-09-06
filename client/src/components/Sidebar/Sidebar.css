@@ -5,8 +5,8 @@
     padding-top: 20px;
 }
 .dashboard-title{
-    line-height:40px;
     text-align:left;
+    padding:20px 0px;
 }
 hr{
     border:1px solid gray;
@@ -18,4 +18,17 @@ hr{
 .active{
     color: white;
     font-weight: 500;
+}
+#maximum{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+#minimum{
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    text-align: center;
+    align-items: center;
 }

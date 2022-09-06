@@ -1,0 +1,30 @@
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding:20px 25px;
+    align-items: center;
+    font-size: 20px;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-input{
+    padding:7px;
+    border:1.6px solid black;
+}
+.search-input:focus{
+    outline:none
+}
+.search-logo{
+    border:1px solid black;
+    height:30px;
+    width:30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color:white;
+}
