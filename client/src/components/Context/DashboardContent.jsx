@@ -12,7 +12,6 @@ export const DashboardContextProvider = ({children}) => {
         setSidebar(data);
     }
     console.log(sidebar);
-    console.log(dashboardContent);
     return (
         <DashboardContext.Provider value={{dashboardContent,findContent,sidebar,sidebarWidth}}>{children}</DashboardContext.Provider>
     )

@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Register.css";
 import { useContext } from 'react';
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
@@ -48,16 +49,19 @@ const Register = () => {
     }
   }
   return (
-      <div>
+    <div className="login-mainPage">
+      <div className="form-div">
+        <p>PLease Register</p>
           <form onSubmit={handleSubmit}>
               <label>Name</label>
-              <input onChange={handleChange} name='name' type="text" />
+              <input onChange={handleChange} name='name' type="text" required />
               <label>Email</label>
-              <input onChange={handleChange} name='email' type="email" />
+              <input onChange={handleChange} name='email' type="email" required />
               <label>Password</label>
-              <input onChange={handleChange} name='password' type="password" />
-              <input type="submit" />
-          </form>
+              <input onChange={handleChange} name='password' type="password" required />
+              <button>Submit</button>
+        </form>
+        </div>
     </div>
   )
 }

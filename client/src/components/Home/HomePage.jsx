@@ -3,7 +3,8 @@ import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Body from '../Body/Body'
 import { UserContext } from '../Context/UserContext';
-
+import logo from "../../Image/skyserveIMG.png"
+import "./Homepage.css";
 const HomePage = () => {
   const navigate = useNavigate();
   const { userName } = useContext(UserContext);
@@ -17,13 +18,18 @@ const HomePage = () => {
     }
   }
   return (
-      <div>
-      <h1>It is Homepage</h1>
+      <div className='homepage'>
+      {/* <h1>It is Homepage</h1> */}
+      <div className='homepage-header'>
+        <div><img src={logo} /></div>
+        <div style={{display: 'flex'}}>
+          {userName==undefined?<button className='login-btn' onClick={() => navigate("/login")}>Login</button >:<p>You have Logged in</p>}
+          <button className='dashboard-btn' onClick={() => {
+            goToDashboard();
+          }}>Dashboard</button>
+        </div>
+      </div>
       
-      {userName==undefined?<button onClick={() => navigate("/login")}>Login</button >:<h2>You have Logged in</h2>}
-      <button onClick={() => {
-        goToDashboard();
-      }}>Dashboard</button>
       {/* <button disabled={userName ? true : false} onClick={() => navigate("/login")}>{ userName?"You have already loggedin":"Login"}</button> */}
     </div>
   )

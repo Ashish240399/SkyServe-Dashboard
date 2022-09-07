@@ -1,4 +1,6 @@
-
+.sidebar{
+    position: fixed;
+}
 .logo{
     width:90%;
     height:50px;
@@ -9,7 +11,7 @@
     padding:20px 0px;
 }
 hr{
-    border:1px solid gray;
+    border:1px solid gold;
 }
 .dashboard-title:hover{
     color:white;

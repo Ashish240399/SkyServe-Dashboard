@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
+import "./Login.css";
 import { useContext } from 'react';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { UserContext } from '../Context/UserContext';
 
 const Login = () => {
@@ -25,7 +26,7 @@ const Login = () => {
         for (let i = 0; i < res.length; i++){
             if (res[i].email === user.email && res[i].password === user.password) {
                 present = true;
-                findUser(res);
+                findUser(res[i]);
                 break;
             }
         }
@@ -38,16 +39,20 @@ const Login = () => {
         }
     }
   return (
-      <div>
-          <h2>Login</h2>
-          <form onSubmit={handleSubmit}>
-              <input onChange={handleChange} name='email' type="text" />
-              <input onChange={handleChange} name='password' type="password" />
-              <input type="submit" value="Login"/>
-          </form>
-          <button onClick={() => {
-              navigate("/register");
-          }}>Register</button>
+      <div className='login-mainPage'>
+          <div className="form-div">
+              <p>PLease Login</p>
+              <form onSubmit={handleSubmit}>
+                  <label>Enter Name</label>
+                  <input className='form-input' onChange={handleChange} name='email' type="text" required />
+                  <label>Enter Password</label>
+                    <input className='form-input' onChange={handleChange} name='password' type="password" required />
+                  {/* <input className="login-btn" type="submit" value="Submit" /> */}
+                  <button className="form-btn" type='submit'>Submit</button>
+                </form>
+          </div>
+          
+          <Link className='link' to="/register">Don't have an account.Please Register!</Link>
       </div>
       
   )

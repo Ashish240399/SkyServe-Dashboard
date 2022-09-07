@@ -1,0 +1,37 @@
+.homepage{
+    background-image: url(../../Image/background.jpg);
+    height:100vh;
+    width:100vw;
+}
+.homepage-header{
+    background-color: black;
+    margin:auto;
+    display: flex;
+    justify-content:space-between;
+    padding:10px 20px;
+    align-items: center;
+}
+.homepage-header>div>img{
+    width:200px;
+}
+.homepage-header>div>p{
+    color:gold;
+}
+
+.login-btn,.dashboard-btn{
+    background-color:black;
+    border:2px solid gold;
+    padding:10px 20px;
+    color:white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:18px;
+    border-radius:50px;
+    width:150px;
+    margin-left: 20px;
+}
+.login-btn:hover,.dashboard-btn:hover{
+    background-color:gold;
+    color:black;
+    border:2px solid white;
+    cursor: pointer;
+}

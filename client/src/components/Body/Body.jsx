@@ -31,9 +31,9 @@ const Body = () => {
     }
   return (
       <div className="body">
-          <div className={leftWidth}>
-              <Left />
-              <p style={{fontSize:"32px",textAlign:"center"}} className="dashboard-title" onClick={() => changeWidth()}>{leftWidth == "left" ? <FaChevronCircleLeft/> : <FaChevronCircleRight/>}</p>
+          <div id="sidebar-fixed" className={leftWidth}>
+              <div><Left /></div>
+              <p style={{fontSize:"32px",textAlign:"center",position:"relative",top:"10px"}} className="dashboard-title" onClick={() => changeWidth()}>{leftWidth == "left" ? <FaChevronCircleLeft/> : <FaChevronCircleRight/>}</p>
               
           </div>
           <div className='right'>

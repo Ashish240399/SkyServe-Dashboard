@@ -1,0 +1,69 @@
+.login-mainPage{
+    background-image:url("../../Image/background.jpg");
+    height:100vh;
+    width:100vw;
+    position: fixed;
+}
+.form-div{
+    margin-top: 10%;
+    padding-bottom: 20px;
+}
+.form-div>p{
+    font-size: 22px;
+    font-weight: 500;
+    color:gold
+}
+.form-div>form{
+    width:300px;
+    margin: auto;
+    text-align: start;
+}
+form>label{
+    color:white;
+    text-align: start;
+    font-size: 13px;
+}
+form>button{
+    background-color: black;
+        border: 2px solid gold;
+        padding: 10px 20px;
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 18px;
+        border-radius: 50px;
+        width: 150px;
+        margin-left: 100px;
+}
+form>button:hover{
+    background-color: gold;
+        color: black;
+        border: 2px solid white;
+        cursor: pointer;
+}
+form>input{
+    padding:10px 20px;
+    background-color: gold;
+    border:2px solid black;
+    width:100%;
+    margin-bottom:20px;
+    border-radius: 50px;
+}
+form>input:focus{
+    background-color: black;
+    color:white;
+    border:2px solid gold;
+    outline:none;
+}
+form>input:hover{
+    background-color: black;
+        color: white;
+        border: 2px solid gold;
+        outline: none;
+}
+.link{
+    color:white;
+    padding-left:40px;
+}
+.link:hover{
+    color:red;
+}
