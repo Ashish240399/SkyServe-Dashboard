@@ -11,20 +11,26 @@
 .dashboard-title {
     text-align: left;
     padding: 20px 0px;
+    width:100px;
+    height:40px;
 }
 
 hr {
     border: 1px solid gold;
+    opacity: 0.5;
 }
 
 .dashboard-title:hover {
     color: white;
-    font-weight: 500;
+    font-weight: 700;
+    padding: 20px 0px;
+    width: 100px;
+    cursor: pointer;
 }
 
 .active {
     color: white;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 #maximum {

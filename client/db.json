@@ -4,12 +4,14 @@
       "name": "Rupali",
       "email": "rupali@gmail.com",
       "password": "rupali",
+      "profile":[],
       "id": 1
     },
     {
       "name": "Ashish ",
       "email": "ashishkumarmohanty7797@gmail.com",
       "password": "Ashish",
+      "profile":[],
       "id": 2
     }
   ]

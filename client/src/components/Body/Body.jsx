@@ -33,7 +33,7 @@ const Body = () => {
       <div className="body">
           <div id="sidebar-fixed" className={leftWidth}>
               <div><Left /></div>
-              <p style={{fontSize:"32px",textAlign:"center",position:"relative",top:"10px"}} className="dashboard-title" onClick={() => changeWidth()}>{leftWidth == "left" ? <FaChevronCircleLeft/> : <FaChevronCircleRight/>}</p>
+              <p style={{fontSize:"32px",textAlign:"center",position:"relative",top:"10px",position:"fixed",top:"450px",display:"flex",justifyContent:"center"}} className="dashboard-title" onClick={() => changeWidth()}>{leftWidth == "left" ? <FaChevronCircleLeft/> : <FaChevronCircleRight/>}</p>
               
           </div>
           <div className='right'>

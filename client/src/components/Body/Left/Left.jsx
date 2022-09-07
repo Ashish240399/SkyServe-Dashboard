@@ -12,7 +12,8 @@
 // export default Left
 import React from 'react'
 import "./Left.css";
-import Logo from "../../../Image/skyserveIMG.png"
+import Logo from "../../../Image/skyserveIMG.png";
+import small_logo from "../../../Image/skyLogo.jpg"
 import { useContext } from 'react';
 import { DashboardContext } from '../../Context/DashboardContent';
 import { useNavigate } from 'react-router-dom';
@@ -25,9 +26,9 @@ const Sidebar = () => {
      const {sidebar}=useContext(DashboardContext);
      const navigate=useNavigate()
   return (
-    <div className='sidebar'>
-          <div onClick={()=>navigate("/")}>
-              <img className='logo' src={Logo} />
+    <div style={{position:"fixed"}} className='sidebar'>
+          <div  onClick={()=>navigate("/")}>
+              <img className='logo' src={sidebar=="max"?Logo:small_logo} />
                <hr/>
           </div>
          

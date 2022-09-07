@@ -8,7 +8,7 @@
     color: rgb(199, 198, 198);
 }
 .min-left{
-    flex:0.8;
+    flex:1;
     padding:0px 10px;
     background-color: black;
     color:rgb(199, 198, 198);
